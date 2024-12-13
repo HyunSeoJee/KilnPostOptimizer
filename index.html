@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="simple.css">
+    <title>Optimize Kiln Posts</title>
+
+</head>
+<script src="back.js"></script>
+<body>
+    <br><br><br><br>
+    <h1>Optimize Kiln Posts @ UMASS SAB</h1>
+    <h4 style="color:black">Are you a UMASS art student? Need help loading better kilns? <br> Struggling to decide which kiln posts to use to fill up the kiln?</h4>
+    <h5>*   *   *</h5>
+    <p style="color:black"> Find out how many kiln posts to use <br> when loading kilns at UMASS SAB's Ceramic studio. <br> Using ILP (Integer Linear Programming) minimize remaining kiln space<br> and customize constraints--or use our default one!  <br> Fill out the following information to get started:</p>
+    <br>
+    <form>
+        <fieldset style="width:500px;display: inline-block;">
+            <legend>Initial Questions</legend>
+            <p>Which kiln from UMASS SAB are you using?</p>
+            <input type="radio" name="kiln" value="1"> 1 or 2<br>
+            <input type="radio" name="kiln" value="3"> 3 or 4<br>
+            <br><br>
+            
+            <label for="height">Height of tallest project in inches (0 if none):</label>
+            <br><br>
+            <input type="number" id="height" min="0">
+            <br><br>
+
+            <p>Would you like to customize the quantity of kiln posts?</p>
+            <input type="radio" name="three" value="yes"> Yes
+            <input type="radio" name="three" value="no"> No
+            <br><br>
+            <button onclick="submit()"> Submit </button>
+            <br><br>
+        </fieldset>
+    </form>
+    <br>
+    <form id="yesThree">
+        <fieldset style="width: 500px;display: inline-block;">
+            <legend>Customize Constraints</legend>
+            <br>
+            <label for="x1">Minimum # of 9 in kiln posts: </label>
+            <br><br>
+            <input type="number" id="x1" min="0">
+            <br>
+
+            <p>If there is extra space, would you like more kiln posts of this size?</p>
+            <input type="radio" name="x1b" value="yes"> Yes
+            <input type="radio" name="x1b" value="no"> No
+            <br><br><br>
+
+            <label for="x2">Minimum # of 7 in kiln posts: </label><br>
+            <br>
+            <input type="number" id="x2" min="0">
+            <br>
+
+            <p>If there is extra space, would you like more kiln posts of this size?</p>
+            <input type="radio" name="x2b" value="yes"> Yes
+            <input type="radio" name="x2b" value="no"> No
+            <br><br><br>
+
+            <label for="x3">Minimum # of 5 in kiln posts: </label>
+            <br><br>
+            <input type="number" id="x3" min="0">
+            <br>
+
+            <p>If there is extra space, would you like more kiln posts of this size?</p>
+            <input type="radio" name="x3b" value="yes"> Yes
+            <input type="radio" name="x3b" value="no"> No
+            <br><br><br>
+
+            <label for="x4">Minimum # of 3 in kiln posts: </label>
+            <br><br>
+            <input type="number" id="x4" min="0">
+            <br>
+
+            <p>If there is extra space, would you like more kiln posts of this size?</p>
+            <input type="radio" name="x4b" value="yes"> Yes
+            <input type="radio" name="x4b" value="no"> No
+            <br><br>
+            <button onclick="customize()"> Customize </button>
+            <br><br>
+        </fieldset>
+    </form>
+    <br><br><br>
+
+    <p></p>
+
+</body>
+</html>
